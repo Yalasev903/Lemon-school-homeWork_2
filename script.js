@@ -17,9 +17,9 @@ alert(reverseStr("Yaroslav"));
 /* Переменная содержит в себе число.
  Написать скрипт который посчитает факториал этого числа.*/
 
- let number = 5;
+let number = 5;
 
-function factorial(number){
+function factorial(number) {
 
      return (number != 1) ? number * factorial(number - 1) : 1;
 }
@@ -36,10 +36,10 @@ let j = 1;
 
 
 for (let i = 1; j <= count; i++) {
-    if (num % i == 0) {
-        console.log(i);
-        j++;
-    }
+     if (num % i == 0) {
+          console.log(i);
+          j++;
+     }
 }
 
 // home work 2.4
@@ -49,6 +49,33 @@ let string = '012345';
 let numbers = string.split('');
 let sum = 0;
 
-numbers.forEach(number => {if(number % 2 === 0) sum += +number;})
+numbers.forEach(number => {
+     if (number % 2 === 0) sum += +number;
+})
 console.log(sum);
 
+// home work 2.5
+// Найти минимальное число которое больше 300 и нацело делиться на 17
+let stop = true;
+for (let i = 300; stop; i++) {
+     if (i % 17 === 0) {
+          stop = false;
+          console.log(i);
+     }
+}
+
+
+
+
+// Заданы две переменные для двух целых чисел, найти максимальное общее значение которое нацело делит два заданных числа.
+
+let a = 167;
+let b = 47;
+var gcd = function (a, b) {
+     if (!b) {
+          return a;
+     }
+
+     return gcd(b, a % b);
+}
+console.log(gcd(a, b));
