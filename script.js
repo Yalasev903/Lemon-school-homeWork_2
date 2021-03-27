@@ -13,6 +13,14 @@ function reverseStr(name) {
 alert(reverseStr("Yaroslav"));
 
 
+// Второй вариант
+let name = "Yaroslav";
+let reversed = '';
+for (i of name) {
+     reversed = i += reversed;
+}
+console.log(reversed);
+
 // home work 2.2
 /* Переменная содержит в себе число.
  Написать скрипт который посчитает факториал этого числа.*/
